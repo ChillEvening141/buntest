@@ -1,13 +1,16 @@
 {
-  "name": "try5.4",
+  "name": "proxy-app",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000b\u0000u\u0000n\u0000n\u0000i\u0000n\u0000g\u0000s\u0000\r\u0000 \u0000",
+  "description": "A proxy server application using Express",
   "main": "proxy.js",
- "scripts": {
-  "start": "node proxy.js"
-}
-,
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "scripts": {
+    "start": "node proxy.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "request": "^2.88.2",
+    "cheerio": "^1.0.0-rc.10"
+  },
+  "author": "Your Name",
+  "license": "MIT"
 }
