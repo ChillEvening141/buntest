@@ -1,0 +1,12 @@
+{
+  "name": "try5.4",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000b\u0000u\u0000n\u0000n\u0000i\u0000n\u0000g\u0000s\u0000\r\u0000 \u0000",
+  "main": "proxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
