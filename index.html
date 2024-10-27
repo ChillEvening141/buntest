@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy Iframe Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Proxy Iframe Example</h1>
+    
+    <!-- Search Form -->
+    <div class="search-container">
+        <form id="searchForm" onsubmit="return updateIframe();">
+            <input type="text" id="searchQuery" placeholder="Enter your search term..." required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    
+    <iframe id="iframe" style="width: 100%; height: 600px;" src="http://localhost:3000/proxy"></iframe>
+    
+    <script>
+        function updateIframe() {
+            const query = document.getElementById('searchQuery').value;
+            const iframe = document.getElementById('iframe');
+            const url = `http://localhost:3000/proxy?url=https://www.bunnings.com.au/search/products?q=${encodeURIComponent(query)}`;
+            iframe.src = url; // Update the iframe's src with the new URL
+            return false; // Prevent the form from submitting in the traditional way
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard: ' + text);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
